@@ -8,7 +8,7 @@ import 'dart:ui' as ui;
 
 import 'package:flutter/material.dart';
 
-import '../../qr_code_scanner.dart';
+import '../../main.dart';
 import 'jsqr.dart';
 import 'media.dart';
 
@@ -256,6 +256,7 @@ class QRViewControllerWeb implements QRViewController {
 
   @override
   Future<CameraFacing> flipCamera() async {
+    // ignore: todo
     // TODO: improve error handling
     _state.facing = _state.facing == CameraFacing.front
         ? CameraFacing.back
@@ -271,28 +272,33 @@ class QRViewControllerWeb implements QRViewController {
 
   @override
   Future<bool?> getFlashStatus() async {
+    // ignore: todo
     // TODO: flash is simply not supported by JavaScipt. To avoid issuing applications, we always return it to be off.
     return false;
   }
 
   @override
   Future<SystemFeatures> getSystemFeatures() {
+    // ignore: todo
     // TODO: implement getSystemFeatures
     throw UnimplementedError();
   }
 
   @override
+  // ignore: todo
   // TODO: implement hasPermissions. Blocking: WebQrView.cameraAvailable() returns a Future<bool> whereas a bool is required
   bool get hasPermissions => throw UnimplementedError();
 
   @override
   Future<void> pauseCamera() {
+    // ignore: todo
     // TODO: implement pauseCamera
     throw UnimplementedError();
   }
 
   @override
   Future<void> resumeCamera() {
+    // ignore: todo
     // TODO: implement resumeCamera
     throw UnimplementedError();
   }
@@ -302,18 +308,21 @@ class QRViewControllerWeb implements QRViewController {
 
   @override
   Future<void> stopCamera() {
+    // ignore: todo
     // TODO: implement stopCamera
     throw UnimplementedError();
   }
 
   @override
   Future<void> toggleFlash() async {
+    // ignore: todo
     // TODO: flash is simply not supported by JavaScipt
     return;
   }
 
   @override
   Future<void> scanInvert(bool isScanInvert) {
+    // ignore: todo
     // TODO: implement scanInvert
     throw UnimplementedError();
   }
